@@ -1,0 +1,27 @@
+# Abdurahman Muhammed — Personal Identity & Biography
+
+> This document provides machine-readable context for Portfolio 2 (Personal Identity) within the official 7-website digital identity ecosystem of Abdurahman Muhammed.
+
+## Canonical Identity Summary
+- **Public Name**: Abdurahman Muhammed
+- **Alternate Name Listings**: Abdurahman Mohammed, Abdurahman
+- **Positioning**: Technology Entrepreneur & AI Architect
+- **Geographic Base**: Addis Ababa, Ethiopia
+- **Site Role**: Site 2 of 7 — Personal Identity, Biography, Career Journey & Vision
+
+## Biographical Outline
+- **Origins**: Raised in Addis Ababa, Ethiopia. Self-taught software engineer motivated by curiosity, systems thinking, and computational leverage.
+- **Career Path**: 
+  - 2021-2022: Deep immersion into full-stack engineering (React, Node.js, Express, MongoDB).
+  - 2023: Founded Rendr Studio, a digital product and custom web engineering studio.
+  - 2024: Co-founded NovaTra Digital Marketing; scaled delivery to 34+ clients across 6+ countries; architected EthioSuq and Arvion Digital.
+  - 2025-2026: Expansion into AI Systems Architecture, agentic workflows, and global entity discoverability.
+- **Core Principles**: Engineering truth over hype, compounding craftsmanship, radical transparency.
+
+## Verified Contacts & Footprint
+- **Email**: aboudive@gmail.com
+- **Telegram**: https://t.me/kartalceo (@kartalceo)
+- **LinkedIn**: https://www.linkedin.com/in/abdurahmanmohammed/
+- **GitHub**: https://github.com/aboudi1029
+- **Instagram**: https://www.instagram.com/salihoglu.ceo
+- **Flagship Portfolio**: https://abdurahmancoder.netlify.app/

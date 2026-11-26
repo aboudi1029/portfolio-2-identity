@@ -1,0 +1,431 @@
+/* ==========================================================================
+   Portfolio 2: Personal Identity
+   Art Direction: Archival Monograph & Literary Broadsheet
+   ========================================================================== */
+
+:root {
+  --paper-bg: #faf8f5;
+  --paper-card: #ffffff;
+  --paper-alt: #f3efe6;
+  --ink-primary: #181615;
+  --ink-secondary: #4a453e;
+  --ink-muted: #787168;
+  --ink-accent: #96381e; /* Warm Terracotta */
+  --rule-color: #e5dfd5;
+  --rule-dark: #cfc6b8;
+  
+  --font-serif: "Charter", "Bitstream Charter", "Sitka Text", "Cambria", Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-w: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--paper-bg);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Folio Masthead */
+.masthead {
+  border-bottom: 2px solid var(--ink-primary);
+  padding: 1.5rem 0 1rem;
+  background: var(--paper-bg);
+}
+
+.masthead-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.masthead-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+}
+
+.masthead-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.masthead-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.masthead-nav a {
+  color: var(--ink-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+
+.masthead-nav a:hover {
+  color: var(--ink-accent);
+  border-bottom-color: var(--ink-accent);
+}
+
+/* Layout: Broad-Sheet 2-Column Grid */
+.broadsheet-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 6rem;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left Column: Dossier Sidebar */
+.dossier-sidebar {
+  position: sticky;
+  top: 55px;
+  border-top: 1px solid var(--ink-primary);
+  padding-top: 1.5rem;
+}
+
+.portrait-frame {
+  width: 100%;
+  aspect-ratio: 4 / 4.5;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule-dark);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%) contrast(105%);
+}
+
+.dossier-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+
+.dossier-table tr {
+  border-bottom: 1px solid var(--rule-color);
+}
+
+.dossier-table th {
+  text-align: left;
+  padding: 0.6rem 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  width: 35%;
+}
+
+.dossier-table td {
+  padding: 0.6rem 0;
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.dossier-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-broadsheet {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ink-primary);
+  background: transparent;
+  color: var(--ink-primary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-broadsheet:hover {
+  background: var(--ink-primary);
+  color: #ffffff;
+}
+
+.btn-broadsheet.primary {
+  background: var(--ink-primary);
+  color: #ffffff;
+}
+
+.btn-broadsheet.primary:hover {
+  background: var(--ink-accent);
+  border-color: var(--ink-accent);
+}
+
+/* Right Column: Narrative Essays */
+.narrative-body {
+  border-top: 1px solid var(--ink-primary);
+  padding-top: 1.5rem;
+}
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.essay-headline {
+  font-family: var(--font-serif);
+  font-size: 2.65rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--ink-primary);
+}
+
+.essay-lead {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule-color);
+  padding-bottom: 2rem;
+}
+
+.essay-prose {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.85;
+  color: var(--ink-secondary);
+  max-width: 68ch;
+}
+
+.essay-prose p {
+  margin-bottom: 1.85rem;
+}
+
+.essay-prose strong {
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.essay-prose .drop-cap {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-right: 0.85rem;
+  margin-top: 0.2rem;
+  color: var(--ink-primary);
+}
+
+.quote-block {
+  margin: 3rem 0;
+  padding: 1.5rem 0 1.5rem 2rem;
+  border-left: 2px solid var(--ink-accent);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--ink-primary);
+}
+
+.quote-block cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+/* Archival Chronology */
+.chronology-section {
+  margin-top: 4.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ink-primary);
+}
+
+.chronology-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chronology-entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule-color);
+}
+
+.chronology-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-accent);
+  text-transform: uppercase;
+}
+
+.chronology-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 0.5rem;
+}
+
+.chronology-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink-secondary);
+}
+
+/* Principles / Thesis Grid */
+.principles-section {
+  margin-top: 4.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ink-primary);
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.principle-item {
+  border-top: 2px solid var(--ink-primary);
+  padding-top: 1rem;
+}
+
+.principle-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-accent);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.principle-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ink-primary);
+}
+
+.principle-body {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+/* Colophon / Footer */
+.colophon {
+  background: var(--paper-alt);
+  border-top: 1px solid var(--rule-dark);
+  padding: 3rem 0;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.colophon-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.colophon-links {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+}
+
+.colophon-links a {
+  color: var(--ink-secondary);
+  text-decoration: none;
+}
+
+.colophon-links a:hover {
+  color: var(--ink-accent);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .broadsheet-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .dossier-sidebar {
+    position: static;
+    max-width: 450px;
+  }
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  .essay-headline {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .chronology-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .masthead-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
